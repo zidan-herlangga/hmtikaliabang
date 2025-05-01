@@ -1,6 +1,6 @@
 # HMTI Kaliabang
 
-Repositori ini merupakan project web untuk Himpunan Mahasiswa Teknik Informatika Kaliabang.
+Repositori ini merupakan project web untuk HMTI (Himpunan Mahasiswa Teknologi Informasi) Kaliabang.
 
 ## 🛠️ Instalasi
 
