@@ -51,7 +51,7 @@ class PostController extends Controller
             "title" => $validated["title"],
             "slug" => Str::slug($validated["slug"]),
             "category_id" => $validated["category"],
-            "content" => $validated["content"],
+            "content" => html_entity_decode($validated["content"]),
             "thumbnail" => $imageName,
             "is_featured" => Arr::has($validated, "featured"),
             "enable_comment" => Arr::has($validated, "comment"),
@@ -93,7 +93,7 @@ class PostController extends Controller
             $post->title = $validated["title"];
             $post->slug = Str::slug($validated["slug"]);
             $post->category_id = $validated["category"];
-            $post->content = $validated["content"];
+            $post->content = html_entity_decode($validated["content"]);
             $post->is_featured = Arr::has($validated, "featured");
             $post->enable_comment = Arr::has($validated, "comment");
             $post->status = Auth::user()->role == 1 ? "0" : $validated["status"];

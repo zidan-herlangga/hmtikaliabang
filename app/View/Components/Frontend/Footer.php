@@ -25,8 +25,13 @@ class Footer extends Component
     public function render(): View|Closure|string
     {
         $sitesettings = SiteSetting::first();
-        $socialmedia = SocialMedia::whereStatus(true)->orderBy("id", "ASC")->get();
-        $menu = json_decode(Menu::first()->footer_menu, true);
-        return view('components.frontend.footer', compact("sitesettings", "socialmedia", "menu"));
+
+        // PERBAIKAN: Cek dulu apakah data Menu ada
+        $menuModel = Menu::first();
+        
+        // Jika ada data, decode json. Jika tidak, kirim array kosong []
+        $menu = $menuModel ? json_decode($menuModel->footer_menu, true) : [];
+
+        return view('components.frontend.footer', compact("sitesettings", "menu"));
     }
 }

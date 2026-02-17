@@ -24,7 +24,13 @@ class Header extends Component
     public function render(): View|Closure|string
     {
         $sitesettings = SiteSetting::first();
-        $menu = json_decode(Menu::first()->header_menu, true);
+
+        // PERBAIKAN: Cek dulu apakah data Menu ada
+        $menuModel = Menu::first();
+        
+        // Jika ada data, decode json. Jika tidak, kirim array kosong []
+        $menu = $menuModel ? json_decode($menuModel->header_menu, true) : [];
+
         return view('components.frontend.header', compact("sitesettings", "menu"));
     }
 }

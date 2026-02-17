@@ -23,10 +23,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFour();
 
-        if (config('app.env') === 'local') {
-            URL::forceScheme('https');
-        } elseif (config('app.env') === 'local') {
-            URL::forceScheme('http');
-        }
+        // if (config('app.env') === 'local') {
+        //     URL::forceScheme('https');
+        // } elseif (config('app.env') === 'local') {
+        //     URL::forceScheme('http');
+        // }
     }
 }

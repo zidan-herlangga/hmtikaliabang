@@ -1,823 +1,571 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('frontend.master')
 
-<head>
-  <!-- GOOGLE -->
-  <meta name="google-site-verification" content="E-CWiRntPMXFYasLdqHw-QI9miQb3XNckb81Kr66q2g" />
+@section('title')
 
-  <!-- BING MICROSOFT -->
-  <meta name="msvalidate.01" content="A4D71A0E2279EF48E367C88291D2E238" />
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>HMTI Kaliabang - Inovatif, Kreatif, Interaktif</title>
-  <meta name="description" content="Himpunan Mahasiswa Teknologi Informasi (HMTI) adalah wadah
-                aspirasi dan pelayanan bagi mahasiswa Jurusan Teknologi
-                Informasi." />
-  <meta name="keywords" content="HMTI DPC Kaliabang, HMTI Kaliabang, DPC Kaliabang" />
+@section('content')
+    <!-- Scroll to Top -->
+    <button id="scroll-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary-700 z-50 flex items-center justify-center">
+        <span class="iconify text-2xl" data-icon="mdi:chevron-up"></span>
+    </button>
 
-  <!-- Favicons -->
-  <link href="{{ asset('assets/homepage/logo-himpunan.png') }}" rel="icon" />
-  <link href="{{ asset('assets/homepage/logo-himpunan.png') }}" rel="apple-touch-icon" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-
-  <!-- Vendor CSS Files -->
-  <link href="{{ asset('assets/homepage/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/homepage/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/homepage/vendor/aos/aos.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/homepage/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/homepage/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
-
-  <!-- Main CSS File -->
-  <link href="{{ asset('assets/homepage/css/main.css') }}" rel="stylesheet" />
-</head>
-
-<body class="index-page">
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset('assets/homepage/logo-himpunan.png') }}" alt="Logo HMTI" />
-        {{-- <h1 class="sitename">HMTI</h1> --}}
-        <br />
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#" class="active">Beranda</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <!-- <li><a href="#services">Services</a></li> -->
-          <li><a href="#divisi">Divisi</a></li>
-          {{-- <li><a href="#team">Tim Kami</a></li> --}}
-          <li><a href="#contact">Bengkel IT</a></li>
-          <li><a href="join/">Join HMTI</a></li>
-          <li><a href="/news">News</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
-  <main class="main">
     <!-- Hero Section -->
-    <section id="hero" class="hero hehe section dark-background">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-            <h1>Himpunan Mahasiswa Teknologi Informasi</h1>
-            <!-- <p>Aktif, Kreatif, Inovatif</p> -->
-
-            <blockquote>
-              <span id="typed"></span>
-            </blockquote>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">Explore!</a>
-            </div>
-          </div>
-          <div class="col-lg-4 order-1 order-lg-2 hero-img ms" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('assets/homepage/logo-himpunan.png') }}" class="animated" alt="Logo HMTI" /><img
-              src="{{ asset('assets/homepage/logo-universitas-bina-sarana-informatika-ubsi.png') }}" class="animated"
-              alt="Logo UBSI" />
-          </div>
+    <section id="beranda" class="relative min-h-screen flex items-center gradient-bg wave-container overflow-hidden">
+        <!-- Background Elements (Sama seperti kode asli) -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-primary-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl animate-pulse-slow"
+                style="animation-delay: 2s;"></div>
         </div>
-      </div>
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Himpunan Mahasiswa
+                        <span
+                            class="block text-transparent bg-clip-text bg-gradient-to-r from-white to-primary-200">Teknologi
+                            Informasi</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-white/80 mb-8 font-light">
+                        <span id="typed-text"></span><span class="animate-pulse">|</span>
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#tentang"
+                            class="px-8 py-4 bg-white text-primary-700 rounded-full font-semibold hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2">
+                            <span>Explore</span> <span class="iconify" data-icon="mdi:arrow-right"></span>
+                        </a>
+                        <a href="#divisi"
+                            class="px-8 py-4 border-2 border-white/30 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 inline-flex items-center justify-center">
+                            Lihat Divisi
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center items-center space-x-8">
+                    <img src="{{ asset('assets/homepage/logo-himpunan.png') }}" alt="Logo HMTI"
+                        class="h-40 sm:h-56 w-auto animate-float drop-shadow-2xl">
+                    <img src="{{ asset('assets/homepage/logo-universitas-bina-sarana-informatika-ubsi.png') }}"
+                        alt="Logo UBSI" class="h-40 sm:h-56 w-auto animate-float-delay drop-shadow-2xl">
+                </div>
+            </div>
+        </div>
     </section>
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg"
-      class="transition duration-300 ease-in-out delay-150">
-      <style>
-        .path-0 {
-          animation: pathAnim-0 4s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-
-        @keyframes pathAnim-0 {
-          0% {
-            d: path("M 0,500 L 0,187 C 51.65372724149776,186.47578151837854 103.30745448299552,185.9515630367571 187,171 C 270.6925455170045,156.0484369632429 386.42390930951564,126.66952937135005 449,154 C 511.57609069048436,181.33047062864995 520.9969082789419,265.37031947784266 582,264 C 643.0030917210581,262.62968052215734 755.5884575747166,175.84919271727932 830,159 C 904.4115424252834,142.15080728272068 940.6492614221918,195.23290965304017 1008,222 C 1075.3507385778082,248.76709034695983 1173.8144967365165,249.21916867055992 1251,239 C 1328.1855032634835,228.78083132944008 1384.0927516317417,207.89041566472002 1440,187 L 1440,500 L 0,500 Z"
-              );
-          }
-
-          25% {
-            d: path("M 0,500 L 0,187 C 83.61113019580898,213.02610786671247 167.22226039161797,239.05221573342493 241,228 C 314.77773960838203,216.94778426657507 378.722088629337,168.81724493301272 443,159 C 507.277911370663,149.18275506698728 571.889385091034,177.6788045345242 626,201 C 680.110614908966,224.3211954654758 723.720371006527,242.4675369288904 795,215 C 866.279628993473,187.5324630711096 965.2291308828583,114.45104774991412 1036,115 C 1106.7708691171417,115.54895225008588 1149.3631054620405,189.7282720714531 1212,214 C 1274.6368945379595,238.2717279285469 1357.3184472689798,212.63586396427345 1440,187 L 1440,500 L 0,500 Z"
-              );
-          }
-
-          50% {
-            d: path("M 0,500 L 0,187 C 89.83442116111306,234.89144623840605 179.6688423222261,282.7828924768121 238,261 C 296.3311576777739,239.2171075231879 323.1590518722088,147.75987633115767 394,131 C 464.8409481277912,114.24012366884232 579.6949501889386,172.1776021985572 655,198 C 730.3050498110614,223.8223978014428 766.0611473720371,217.52971487461352 816,201 C 865.9388526279629,184.47028512538648 930.0604603229131,157.70353830298868 995,165 C 1059.939539677087,172.29646169701132 1125.6970113363104,213.6561319134318 1200,223 C 1274.3029886636896,232.3438680865682 1357.1514943318448,209.6719340432841 1440,187 L 1440,500 L 0,500 Z"
-              );
-          }
-
-          75% {
-            d: path("M 0,500 L 0,187 C 87.91068361387838,156.14737203710064 175.82136722775675,125.2947440742013 236,122 C 296.17863277224325,118.7052559257987 328.6252147028513,142.96839574029542 381,160 C 433.3747852971487,177.03160425970458 505.67777396083807,186.83167296461698 586,204 C 666.3222260391619,221.16832703538302 754.6636894537959,245.7049124012367 822,217 C 889.3363105462041,188.2950875987633 935.667468223978,106.34867743043628 993,110 C 1050.332531776022,113.65132256956372 1118.6664376502922,202.90037787701823 1195,230 C 1271.3335623497078,257.09962212298177 1355.666781174854,222.04981106149089 1440,187 L 1440,500 L 0,500 Z"
-              );
-          }
-
-          100% {
-            d: path("M 0,500 L 0,187 C 51.65372724149776,186.47578151837854 103.30745448299552,185.9515630367571 187,171 C 270.6925455170045,156.0484369632429 386.42390930951564,126.66952937135005 449,154 C 511.57609069048436,181.33047062864995 520.9969082789419,265.37031947784266 582,264 C 643.0030917210581,262.62968052215734 755.5884575747166,175.84919271727932 830,159 C 904.4115424252834,142.15080728272068 940.6492614221918,195.23290965304017 1008,222 C 1075.3507385778082,248.76709034695983 1173.8144967365165,249.21916867055992 1251,239 C 1328.1855032634835,228.78083132944008 1384.0927516317417,207.89041566472002 1440,187 L 1440,500 L 0,500 Z"
-              );
-          }
-        }
-      </style>
-      <defs>
-        <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-          <stop offset="5%" stop-color="#6600ff"></stop>
-          <stop offset="95%" stop-color="#6600ff"></stop>
-        </linearGradient>
-      </defs>
-      <path
-        d="M 0,500 L 0,187 C 51.65372724149776,186.47578151837854 103.30745448299552,185.9515630367571 187,171 C 270.6925455170045,156.0484369632429 386.42390930951564,126.66952937135005 449,154 C 511.57609069048436,181.33047062864995 520.9969082789419,265.37031947784266 582,264 C 643.0030917210581,262.62968052215734 755.5884575747166,175.84919271727932 830,159 C 904.4115424252834,142.15080728272068 940.6492614221918,195.23290965304017 1008,222 C 1075.3507385778082,248.76709034695983 1173.8144967365165,249.21916867055992 1251,239 C 1328.1855032634835,228.78083132944008 1384.0927516317417,207.89041566472002 1440,187 L 1440,500 L 0,500 Z"
-        stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
-        class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)"></path>
-    </svg>
-    <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Tentang Kami</h2>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-            <p style="text-align: justify">
-              Himpunan Mahasiswa Teknologi Informasi (HMTI) adalah wadah
-              aspirasi dan pelayanan bagi mahasiswa Jurusan Teknologi
-              Informasi. HMTI didirikan pada tanggal 02 Februari 2020
-              bertempat di Jakarta. Himpunan Mahasiswa Teknologi Informasi
-              terbentuk dengan dilatar belakangi oleh kebutuhan mahasiswa
-              program studi Teknologi Informasi untuk terciptanya lingkungan
-              yang mendukung pengembangan skill mahasiswa pada program studi
-              tersebut sebagai calon teknisi dan akademisi aktif yang akan
-              turun ke tengah-tengah masyarakat.
-            </p>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p style="text-align: justify">
-              Terbentuknya HMTI adalah sebagai salah satu wadah organisasi
-              yang sangat dibutuhkan oleh seluruh mahasiswa Teknologi
-              Informasi Universitas Bina Sarana Informatika untuk mencurahkan
-              ide-ide brilian dan mengembangkan kemampuan mereka dalam
-              menguasai materi-materi informatika, dan mengembangkan
-              kreativitas yang tidak hanya bersifat teoritis, sehingga mereka
-              menjadi akademisi yang profesional dan patut diteladani.
-            </p>
-            <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Lanjut
-                Baca</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <section id="tentang" class="py-24 bg-primary-50 relative overflow-hidden">
+        <!-- Konten Tentang Sama Persis Seperti Kode Asli Anda -->
+        <div class="absolute inset-0 opacity-50"
+            style="background-image: radial-gradient(circle at 1px 1px, #7c3aed 1px, transparent 0); background-size: 30px 30px;">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-900 mb-4">Tentang Kami</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-400 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <p class="text-gray-700 text-lg leading-relaxed text-justify">Himpunan Mahasiswa Teknologi Informasi
+                        (HMTI) adalah wadah aspirasi dan pelayanan bagi mahasiswa Jurusan Teknologi Informasi. HMTI
+                        didirikan pada tanggal 02 Februari 2020 bertempat di Jakarta. Himpunan Mahasiswa Teknologi Informasi
+                        terbentuk dengan dilatar belakangi oleh kebutuhan mahasiswa program studi Teknologi Informasi untuk
+                        terciptanya lingkungan yang mendukung pengembangan skill mahasiswa pada program studi tersebut
+                        sebagai calon teknisi dan akademisi aktif yang akan turun ke tengah-tengah masyarakat.</p>
                 </div>
-                <div class="modal-body">
-                  <div class="row gy-4">
-                    <div class="col-lg-6">
-                      <p style="text-align: justify">
-                        Himpunan Mahasiswa Teknologi Informasi (HMTI) adalah
-                        wadah aspirasi dan pelayanan bagi mahasiswa Jurusan
-                        Teknologi Informasi. HMTI didirikan pada tanggal 02
-                        Februari 2020 bertempat di Jakarta. Himpunan Mahasiswa
-                        Teknologi Informasi terbentuk dengan dilatar belakangi
-                        oleh kebutuhan mahasiswa program studi Teknologi
-                        Informasi untuk terciptanya lingkungan yang mendukung
-                        pengembangan skill mahasiswa pada program studi
-                        tersebut sebagai calon teknisi dan akademisi aktif
-                        yang akan turun ke tengah-tengah masyarakat.
-                      </p>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <p class="text-gray-700 text-lg leading-relaxed text-justify">Terbentuknya HMTI adalah sebagai salah
+                        satu wadah organisasi yang sangat dibutuhkan oleh seluruh mahasiswa Teknologi Informasi Universitas
+                        Bina Sarana Informatika untuk mencurahkan ide-ide brilian dan mengembangkan kemampuan mereka dalam
+                        menguasai materi-materi informatika, dan mengembangkan kreativitas yang tidak hanya bersifat
+                        teoritis, sehingga mereka menjadi akademisi yang profesional dan patut diteladani.</p>
+                    <button onclick="openModal()"
+                        class="mt-6 inline-flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors group">
+                        <span>Lanjut Baca</span> <span
+                            class="iconify transform group-hover:translate-x-1 transition-transform"
+                            data-icon="mdi:arrow-right"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative min-h-screen flex items-center justify-center p-4">
+            <div class="relative bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+                <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+                    <h3 class="font-heading text-xl font-bold text-dark-900">Tentang HMTI</h3>
+                    <button onclick="closeModal()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                        <span class="iconify text-2xl text-gray-500" data-icon="mdi:close"></span>
+                    </button>
+                </div>
+                <div class="p-6 space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <p class="text-gray-700 text-justify">Himpunan Mahasiswa Teknologi Informasi (HMTI) adalah wadah
+                            aspirasi dan pelayanan bagi mahasiswa Jurusan Teknologi Informasi. HMTI didirikan pada tanggal
+                            02 Februari 2020 bertempat di Jakarta.</p>
+                        <p class="text-gray-700 text-justify">Terbentuknya HMTI adalah sebagai salah satu wadah organisasi
+                            yang sangat dibutuhkan oleh seluruh mahasiswa Teknologi Informasi Universitas Bina Sarana
+                            Informatika untuk mencurahkan ide-ide brilian.</p>
+                        <p class="text-gray-700 text-justify">Memperhatikan realita kemampuan mahasiswa dalam mengelola
+                            kepribadian serta kemampuan intelektual dalam sisi akademisi aktif dilingkungan perkuliahan,
+                            baik dalam segi teknisi informasi, berkomunikasi atau public speaking dan lain-lain.</p>
+                        <p class="text-gray-700 text-justify">HMTI bertempat di Universitas Bina Sarana Informatika Kramat
+                            di Jl. Kramat Raya No. 98 RT.18/RW.1, Paseban, kecamatan Senen, Kota Jakarta pusat, Daerah
+                            Khusus Ibukota Jakarta 10420.</p>
                     </div>
-                    <div class="col-lg-6">
-                      <p style="text-align: justify">
-                        Terbentuknya HMTI adalah sebagai salah satu wadah
-                        organisasi yang sangat dibutuhkan oleh seluruh
-                        mahasiswa Teknologi Informasi Universitas Bina Sarana
-                        Informatika untuk mencurahkan ide-ide brilian dan
-                        mengembangkan kemampuan mereka dalam menguasai
-                        materi-materi informatika, dan mengembangkan
-                        kreativitas yang tidak hanya bersifat teoritis,
-                        sehingga mereka menjadi akademisi yang profesional dan
-                        patut diteladani.
-                      </p>
-                    </div>
-                    <div class="col-lg-6">
-                      <p style="text-align: justify">
-                        Memperhatikan realita kemampuan mahasiswa dalam
-                        mengelola kepribadian serta kemampuan intelektual
-                        dalam sisi akademisi aktif dilingkungan perkuliahan,
-                        baik dalam segi teknisi informasi, berkomunikasi atau
-                        public speaking dan lain-lain, maka dari itu dengan
-                        keinginan luhur dan dukungan dari seluruh mahasiswa
-                        Teknologi Informasi Universitas Bina Sarana
-                        Informatika memutuskan satu kesepakatan untuk
-                        membentuk sebuah organisasi yang bernama HMTI sebagai
-                        wadah diskusi mahasiswa Teknologi Informasi dan
-                        pengembangan softskill secara produktif.
-                      </p>
-                    </div>
-                    <div class="col-lg-6">
-                      <p style="text-align: justify">
-                        HMTI bertempat di Universitas Bina Sarana Informatika
-                        Kramat di Jl. Kramat Raya No. 98 RT.18/RW.1, Paseban,
-                        kecamatan Senen, Kota Jakarta pusat, Daerah Khusus
-                        Ibukota Jakarta 10420.
-                      </p>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- /About Section -->
-
-    <!-- Why Us Section -->
-    <section id="why-us" class="section why-us light-background" data-builder="section">
-      <div class="container-fluid">
-        <div class="row gy-4">
-          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3>
-                <strong>Visi, Misi</strong>
-              </h3>
-            </div>
-
-            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-              <div class="faq-item faq-active">
-                <h3>Visi</h3>
-                <div class="faq-content">
-                  <p>
-                    Menjadikan HMTI sebagai wadah aspirasi dan pelayanan demi
-                    mewujudkan mahasiswa teknologi informasi yang aktif,
-                    kreatif, kompetitif, bertanggungjawab, dan berwawasan luas
-                    agar mampu bersaing dalam perkembangan teknologi.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Misi</h3>
-                <div class="faq-content">
-                  <p>
-                    1. Meningkatkan kontribusi HMTI kepada lingkungan kampus
-                    serta masyarakat luas terutama dibidang Teknologi
-                    Informasi.
-                    <br />
-                    2. Menciptakan prestasi atau akademisi yang kreatif dan
-                    inovatif dari berbagai aspek, baik akademik ataupun non
-                    akademik.
-                    <br />
-                    3. Menanamkan sikap disiplin dan bertanggung jawab dalam
-                    berorganisasi kepada setiap anggota.
-                    <br />
-                    4. Menciptakan ikatan yang kuat dan rasa memiliki terhadap
-                    himpunan serta menjadikan HMTI sebagai keluarga.
-                    <br />
-                    5. Menjalin hubungan baik dan kerja sama dengan organisasi
-                    mahasiswa lainnya serta menjaga nama baik himpunan dan
-                    almamater.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-            <img src="{{ asset('assets/homepage/img/skills.png') }}" class="img-fluid" alt="" data-aos="zoom-in"
-              data-aos-delay="100" />
-          </div>
-
-          <div class="col-lg-12">
-            <div class="counter-section d-flex flex-row align-items-center justify-content-center my-4">
-              <div class="counter-item">
-                <h1 id="num1" class="counter-number">0</h1>
-                <!-- Initial value set to 0 -->
-                <h3 class="counter-label">Proker</h3>
-              </div>
-              <div class="counter-item">
-                <h1 id="num2" class="counter-number">0</h1>
-                <!-- Initial value set to 0 -->
-                <h3 class="counter-label">Divisi</h3>
-              </div>
-              <div class="counter-item">
-                <h1 id="num3" class="counter-number">0</h1>
-                <!-- Initial value set to 0 -->
-                <h3 class="counter-label">Anggota</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Why Us Section -->
-
-    <!-- Services Section -->
-    <section id="divisi" class="services section light-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Divisi HMTI</h2>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week icon"></i>
-              </div>
-              <h4>
-                <a href="kominfo/" class="stretched-link">Divisi Kominfo</a>
-              </h4>
-              <p>
-                Divisi Komunikasi dan Informasi (Kominfo) adalah divisi yang
-                bertugas dalam bidang komunikasi, publikasi, dan penyebaran
-                informasi.
-              </p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-megaphone"></i>
-              </div>
-              <h4>
-                <a href="psdm/" class="stretched-link">Divisi PSDM</a>
-              </h4>
-              <p>
-                Divisi Pengembangan Sumber Daya Mahasiswa (PSDM) adalah divisi
-                yang bertugas untuk mengembangkan sumber daya mahasiswa di
-                berbagai organisasi.
-              </p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-info-circle"></i>
-              </div>
-              <h4>
-                <a href="litbang/" class="stretched-link">Divisi Litbang</a>
-              </h4>
-              <p>
-                Divisi litbang atau divisi penelitian dan pengembangan adalah
-                divisi yang bertugas melakukan penelitian, pengembangan, dan
-                publikasi.
-              </p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-        </div>
-      </div>
-    </section>
-    <!-- /Services Section -->
-
-    {{--
-    <!-- Team Section -->
-    <section id="team" class="team section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Struktur Organisasi HMTI</h2>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <a href="assets/img/team/therima.jpg" title="Therima" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link">
-                  <img src="assets/img/team/therima.jpg" class="img-fluid" alt="" />
-                </a>
-              </div>
-              <div class="member-info">
-                <h4>Therima</h4>
-                <span>Ketua DPC Kaliabang</span>
-                <!-- <p>
-                    Explicabo voluptatem mollitia et repellat qui dolorum quasi
-                  </p> -->
-                <div class="social">
-                  <a href="https://www.instagram.com/therima_ndr/" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <a href="assets/img/team/ega.jpg" title="Ega Ernanda" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link">
-                  <img src="assets/img/team/ega.jpg" class="img-fluid" alt="" />
-                </a>
-              </div>
-              <div class="member-info">
-                <h4>Ega Ernanda</h4>
-                <span>Sekretaris Jendral</span>
-                <!-- <p>
-                    Aut maiores voluptates amet et quis praesentium qui senda
-                    para
-                  </p> -->
-                <div class="social">
-                  <a href="https://www.instagram.com/eggrnnd_
-/" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <a href="assets/img/team/idris.jpg" title="Idris Haidir Ali" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link">
-                  <img src="assets/img/team/idris.jpg" class="img-fluid" alt="" />
-                </a>
-              </div>
-              <div class="member-info">
-                <h4>Idris Haidir Ali</h4>
-                <span>Bendahara</span>
-                <!-- <p>
-                    Quisquam facilis cum velit laborum corrupti fuga rerum quia
-                  </p> -->
-                <div class="social">
-                  <a href="https://instagram.com/idris_haidir" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <a href="assets/img/team/jabal.jpg" title="Ismail Jabal Haq" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link">
-                  <img src="assets/img/team/jabal.jpg" class="img-fluid" alt="" />
-                </a>
-              </div>
-              <div class="member-info">
-                <h4>Ismail Jabal Haq</h4>
-                <span>Ketua Divisi Kominfo</span>
-                <!-- <p>
-                    Dolorum tempora officiis odit laborum officiis et et
-                    accusamus
-                  </p> -->
-                <div class="social">
-                  <a href="https://instagram.com/jabal_haq09" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <a href="assets/img/team/dika.jpg" title="Mahardika Iskandar" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link">
-                  <img src="assets/img/team/dika.jpg" class="img-fluid" alt="" />
-                </a>
-              </div>
-              <div class="member-info">
-                <h4>Mahardika Iskandar</h4>
-                <span>Ketua Divisi Litbang</span>
-                <!-- <p>
-                    Dolorum tempora officiis odit laborum officiis et et
-                    accusamus
-                  </p> -->
-                <div class="social">
-                  <a href="https://instagram.com/dik.jong"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <a href="assets/img/team/adit.jpg" title="Aditiya Saputra" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link">
-                  <img src="assets/img/team/adit.jpg" class="img-fluid" alt="" />
-                </a>
-              </div>
-              <div class="member-info">
-                <h4>Aditiya Saputra</h4>
-                <span>Ketua Divisi PSDM</span>
-                <!-- <p>
-                    Dolorum tempora officiis odit laborum officiis et et
-                    accusamus
-                  </p> -->
-                <div class="social">
-                  <a href="https://instagram.com/_sptrraa_" target="_blank">
-                    <i class="bi bi-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-        </div>
-      </div>
-    </section>
-    <!-- /Team Section --> --}}
-
-    <!-- Faq 2 Section -->
-    <section id="faq-2" class="faq-2 section light-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pertanyaan yang Sering Diajukan</h2>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="faq-container">
-              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Apa saja peluang karir yang bisa didapatkan setelah lulus
-                  dari jurusan Teknologi Informasi?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Lulusan jurusan Teknologi Informasi memiliki banyak
-                    peluang karir, termasuk posisi sebagai administrator
-                    sistem, analis data, pengembang perangkat lunak, spesialis
-                    keamanan siber, manajer TI, dan konsultan teknologi.
-                    Permintaan yang terus meningkat akan solusi digital dan
-                    manajemen data memastikan bahwa profesional TI dapat
-                    menemukan berbagai jalur karir yang menjanjikan di
-                    berbagai industri.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Bagaimana jurusan Teknologi Informasi mendukung inovasi dan
-                  kreativitas?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Jurusan Teknologi Informasi menawarkan banyak kesempatan
-                    untuk berinovasi dan berkreasi. Mahasiswa dapat terlibat
-                    dalam pengembangan sistem informasi yang efisien, desain
-                    arsitektur jaringan, atau penerapan teknologi terbaru
-                    seperti kecerdasan buatan (AI) dan Internet of Things
-                    (IoT). Misalnya, dalam pengembangan aplikasi bisnis,
-                    mahasiswa dapat merancang solusi kreatif untuk
-                    meningkatkan proses operasional dan pengalaman pengguna.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Apakah gaji di bidang Teknologi Informasi kompetitif
-                  dibandingkan dengan bidang lainnya?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Ya, gaji di bidang Teknologi Informasi cenderung sangat
-                    kompetitif. Posisi seperti analis data, manajer TI, dan
-                    spesialis keamanan siber sering kali mendapatkan
-                    kompensasi yang menarik, mengingat keterampilan teknis
-                    yang dibutuhkan dan permintaan yang tinggi untuk
-                    profesional TI. Gaji yang kompetitif ini mencerminkan
-                    nilai strategis dari keahlian TI dalam mendukung dan
-                    mengelola infrastruktur teknologi yang penting bagi
-                    organisasi.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Seberapa fleksibel pekerjaan di bidang Teknologi Informasi?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Banyak pekerjaan di bidang Teknologi Informasi menawarkan
-                    fleksibilitas tinggi, seperti opsi untuk bekerja dari
-                    jarak jauh, jam kerja yang fleksibel, atau sistem kerja
-                    hybrid. Misalnya, seorang pengembang perangkat lunak atau
-                    spesialis jaringan sering kali dapat melakukan pekerjaan
-                    mereka dari lokasi yang berbeda asalkan mereka memiliki
-                    akses ke infrastruktur yang diperlukan. Fleksibilitas ini
-                    memungkinkan karyawan TI untuk menyesuaikan jadwal kerja
-                    dengan kebutuhan pribadi mereka.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Bagaimana peran Teknologi Informasi dalam transformasi
-                  digital?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Teknologi Informasi berperan penting dalam transformasi
-                    digital dengan menyediakan alat dan solusi yang
-                    memungkinkan organisasi untuk mengoptimalkan operasi
-                    mereka dan beradaptasi dengan perubahan teknologi. Ini
-                    termasuk pengembangan dan penerapan sistem informasi yang
-                    mendukung otomatisasi, analisis data besar, dan integrasi
-                    berbagai platform digital. Misalnya, sistem manajemen
-                    hubungan pelanggan (CRM) dan solusi berbasis cloud
-                    membantu perusahaan dalam meningkatkan efisiensi
-                    operasional dan pengalaman pelanggan.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Apa yang membedakan jurusan Teknologi Informasi dari jurusan
-                  lain dalam konteks perkembangan karir?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Jurusan Teknologi Informasi sering kali membedakan dirinya
-                    dengan fokus pada pengelolaan dan penerapan solusi
-                    teknologi yang mendukung berbagai aspek operasional
-                    bisnis. Sementara jurusan lain mungkin lebih fokus pada
-                    teori atau konsep spesifik, Teknologi Informasi
-                    berorientasi pada penerapan praktis dan solusi yang dapat
-                    langsung diterapkan dalam lingkungan bisnis. Hal ini
-                    memungkinkan lulusan untuk terlibat langsung dalam
-                    pengembangan dan pengelolaan sistem yang penting bagi
-                    keberhasilan organisasi.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Faq 2 Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Bengkel IT</h2>
-        <p>
-          Punya keluhan mengenai install ulang, install aplikasi, dan masalah
-          lainnya? Yuk, isi kolom dibawah ini untuk hubungi kami:
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-12">
-            <form class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Nama Lengkap:</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="" />
-                </div>
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Merk Laptop:</label>
-                  <input type="text" name="name" id="merk-field" class="form-control" required="" />
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Keluhan:</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-
-                  <button type="submit" onclick="send()">Send Message</button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- End Contact Form -->
-        </div>
-      </div>
-    </section>
-    <!-- /Contact Section -->
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <img src="{{ asset('assets/homepage/logo-himpunan.png') }}" alt="Logo HMTI" height="80" />
-            <span class="ms-4 sitename">HMTI</span>
-          </a>
-          <div class="footer-contact mt-5">
-            <p>Jl. Raya Kaliabang N0.8 Perwira Bekasi Utara 17142 Bekasi</p>
-            <p>West Java, Indonesia West Java</p>
-            <p class="mt-3">
-              <strong>Telp:</strong> <span>+62 21 88985633</span>
-            </p>
-            <p>
-              <strong>Email:</strong>
-              <span>hmti.kaliabang@gmail.com</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-12 mt-5">
-          <h4>About:</h4>
-          <div class="footer-links d-flex flex-column">
-            <a href="https://www.bsi.ac.id/indexkoe_yht.php" target="_blank">BSI Universitas</a>
-            <a href="https://pusatinformasi.kampusmerdeka.kemdikbud.go.id/hc/id" target="_blank">Kampus Merdeka</a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-12 mt-5">
-          <h4>Follow Us:</h4>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.instagram.com/hmti.kaliabang/"><i class="bi bi-instagram"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>
-        © <span>2025</span>
-        <strong class="px-1 sitename">HMTI Kaliabang,</strong>
-        <span>All Rights Reserved.</span>
-      </p>
-    </div>
-  </footer>
+    <!-- Visi Misi Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <!-- Salin kode Visi Misi dari sumber asli Anda di sini -->
+        <!-- Pastikan class "reveal" ada untuk animasi -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent-400/10 rounded-full blur-3xl"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <img src="{{ asset('assets/homepage/img/skills.png') }}" alt="Skills"
+                        class="w-full max-w-md mx-auto drop-shadow-2xl">
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <h3 class="font-heading text-3xl font-bold text-dark-900 mb-8">Visi & Misi</h3>
+                    <div class="space-y-4">
+                        <!-- Visi Item -->
+                        <div class="faq-item active border border-gray-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)"
+                                class="w-full px-6 py-4 flex items-center justify-between bg-primary-50 hover:bg-primary-100 transition-colors">
+                                <span class="font-heading font-semibold text-lg text-dark-900">Visi</span>
+                                <span class="iconify faq-icon text-2xl text-primary-600 transition-transform duration-300"
+                                    data-icon="mdi:chevron-down"></span>
+                            </button>
+                            <div class="faq-content px-6 bg-white">
+                                <p class="py-4 text-gray-700">Menjadikan HMTI sebagai wadah aspirasi dan pelayanan demi
+                                    mewujudkan mahasiswa teknologi informasi yang aktif, kreatif, kompetitif,
+                                    bertanggungjawab, dan berwawasan luas agar mampu bersaing dalam perkembangan teknologi.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Misi Item -->
+                        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)"
+                                class="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                                <span class="font-heading font-semibold text-lg text-dark-900">Misi</span>
+                                <span class="iconify faq-icon text-2xl text-primary-600 transition-transform duration-300"
+                                    data-icon="mdi:chevron-down"></span>
+                            </button>
+                            <div class="faq-content px-6 bg-white">
+                                <ul class="py-4 text-gray-700 space-y-3">
+                                    <li class="flex items-start space-x-3"><span class="iconify text-primary-500 mt-1"
+                                            data-icon="mdi:check-circle"></span><span>Meningkatkan kontribusi HMTI kepada
+                                            lingkungan kampus serta masyarakat luas terutama dibidang Teknologi
+                                            Informasi.</span></li>
+                                    <li class="flex items-start space-x-3"><span class="iconify text-primary-500 mt-1"
+                                            data-icon="mdi:check-circle"></span><span>Menciptakan prestasi atau akademisi
+                                            yang kreatif dan inovatif dari berbagai aspek, baik akademik ataupun non
+                                            akademik.</span></li>
+                                    <li class="flex items-start space-x-3"><span class="iconify text-primary-500 mt-1"
+                                            data-icon="mdi:check-circle"></span><span>Menanamkan sikap disiplin dan
+                                            bertanggung jawab dalam berorganisasi kepada setiap anggota.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+            <!-- Counter Section -->
+            <div class="mt-16 reveal" style="transition-delay: 0.3s;">
+                <div class="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 rounded-2xl p-8 sm:p-12">
+                    <div class="grid grid-cols-3 gap-8 text-center">
+                        <div>
+                            <h2 class="font-heading text-4xl sm:text-5xl font-bold text-white counter" data-target="25">0
+                            </h2>
+                            <p class="text-white/80 mt-2 font-medium">Proker</p>
+                        </div>
+                        <div>
+                            <h2 class="font-heading text-4xl sm:text-5xl font-bold text-white counter" data-target="3">0
+                            </h2>
+                            <p class="text-white/80 mt-2 font-medium">Divisi</p>
+                        </div>
+                        <div>
+                            <h2 class="font-heading text-4xl sm:text-5xl font-bold text-white counter" data-target="150">0
+                            </h2>
+                            <p class="text-white/80 mt-2 font-medium">Anggota</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Preloader -->
-  <!-- <div id="preloader"></div> -->
+    <!-- Divisi Section -->
+    <section id="divisi" class="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-30"
+            style="background-image: radial-gradient(circle at 1px 1px, #7c3aed 1px, transparent 0); background-size: 40px 40px;">
+        </div>
 
-  <!-- Vendor JS Files -->
-  <script src="{{ asset('assets/homepage/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/swiper/swiper-bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/waypoints/noframework.waypoints.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/typeitjs/typeitjs.js') }}"></script>
-  <script src="{{ asset('assets/homepage/vendor/count-me/count-me.js') }}"></script>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-900 mb-4">
+                    Divisi HMTI
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-400 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Tiga pilar utama yang menjalankan roda organisasi untuk mencapai visi dan misi.
+                </p>
+            </div>
 
-  <!-- Main JS File -->
-  <script src="{{ asset('assets/homepage/js/main.js') }}"></script>
-  <script src="{{ asset('assets/homepage/js/bengkel-it.js') }}"></script>
-</body>
+            <!-- Divisi Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
 
-</html>
+                <!-- Divisi Kominfo -->
+                <div class="reveal group" style="transition-delay: 0.1s;">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full transform hover:-translate-y-2">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/30">
+                            <span class="iconify text-3xl text-white" data-icon="mdi:bullhorn-outline"></span>
+                        </div>
+                        <h4 class="font-heading text-xl font-bold text-dark-900 mb-4">Divisi Kominfo</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Divisi Komunikasi dan Informasi (Kominfo) bertanggung jawab dalam penyebaran informasi,
+                            publikasi kegiatan, pengelolaan media sosial, serta menjalin hubungan masyarakat.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group/link">
+                            <span>Selengkapnya</span>
+                            <span class="iconify transform group-hover/link:translate-x-1 transition-transform"
+                                data-icon="mdi:arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Divisi PSDM -->
+                <div class="reveal group" style="transition-delay: 0.2s;">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full transform hover:-translate-y-2">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-emerald-500/30">
+                            <span class="iconify text-3xl text-white" data-icon="mdi:account-group-outline"></span>
+                        </div>
+                        <h4 class="font-heading text-xl font-bold text-dark-900 mb-4">Divisi PSDM</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Divisi Pengembangan Sumber Daya Mahasiswa (PSDM) berfokus pada pengembangan soft skills,
+                            leadership, serta pengaderan anggota baru untuk mencetak generasi penerus yang berkualitas.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center space-x-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors group/link">
+                            <span>Selengkapnya</span>
+                            <span class="iconify transform group-hover/link:translate-x-1 transition-transform"
+                                data-icon="mdi:arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Divisi Litbang -->
+                <div class="reveal group" style="transition-delay: 0.3s;">
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full transform hover:-translate-y-2">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary-500/30">
+                            <span class="iconify text-3xl text-white" data-icon="mdi:lightbulb-outline"></span>
+                        </div>
+                        <h4 class="font-heading text-xl font-bold text-dark-900 mb-4">Divisi Litbang</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Divisi Penelitian dan Pengembangan (Litbang) merupakan wadah bagi anggota untuk melakukan riset,
+                            inovasi teknologi, serta mengembangkan proyek-proyek kreatif bermanfaat.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors group/link">
+                            <span>Selengkapnya</span>
+                            <span class="iconify transform group-hover/link:translate-x-1 transition-transform"
+                                data-icon="mdi:arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-dark-900 relative overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-72 h-72 bg-accent-400/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Pertanyaan yang
+                    Sering Diajukan</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-400 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="reveal faq-item glass rounded-xl overflow-hidden" style="transition-delay: 0.1s;">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <span class="iconify text-2xl text-primary-400" data-icon="mdi:help-circle-outline"></span>
+                            <span class="font-heading font-semibold text-white text-left">Apa saja peluang karir
+                                yang bisa didapatkan setelah lulus dari jurusan Teknologi Informasi?</span>
+                        </div>
+                        <span class="iconify faq-icon text-2xl text-primary-400 transition-transform duration-300"
+                            data-icon="mdi:chevron-down"></span>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="py-4 text-white/70 leading-relaxed">
+                            Lulusan jurusan Teknologi Informasi memiliki banyak peluang karir, termasuk posisi
+                            sebagai administrator sistem, analis data, pengembang perangkat lunak, spesialis
+                            keamanan siber, manajer TI, dan konsultan teknologi. Permintaan yang terus meningkat
+                            akan solusi digital dan manajemen data memastikan bahwa profesional TI dapat menemukan
+                            berbagai jalur karir yang menjanjikan di berbagai industri.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="reveal faq-item glass rounded-xl overflow-hidden" style="transition-delay: 0.2s;">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <span class="iconify text-2xl text-primary-400" data-icon="mdi:help-circle-outline"></span>
+                            <span class="font-heading font-semibold text-white text-left">Bagaimana jurusan
+                                Teknologi Informasi mendukung inovasi dan kreativitas?</span>
+                        </div>
+                        <span class="iconify faq-icon text-2xl text-primary-400 transition-transform duration-300"
+                            data-icon="mdi:chevron-down"></span>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="py-4 text-white/70 leading-relaxed">
+                            Jurusan Teknologi Informasi menawarkan banyak kesempatan untuk berinovasi dan berkreasi.
+                            Mahasiswa dapat terlibat dalam pengembangan sistem informasi yang efisien, desain
+                            arsitektur jaringan, atau penerapan teknologi terbaru seperti kecerdasan buatan (AI) dan
+                            Internet of Things (IoT).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="reveal faq-item glass rounded-xl overflow-hidden" style="transition-delay: 0.3s;">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <span class="iconify text-2xl text-primary-400" data-icon="mdi:help-circle-outline"></span>
+                            <span class="font-heading font-semibold text-white text-left">Apakah gaji di bidang
+                                Teknologi Informasi kompetitif dibandingkan dengan bidang lainnya?</span>
+                        </div>
+                        <span class="iconify faq-icon text-2xl text-primary-400 transition-transform duration-300"
+                            data-icon="mdi:chevron-down"></span>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="py-4 text-white/70 leading-relaxed">
+                            Ya, gaji di bidang Teknologi Informasi cenderung sangat kompetitif. Posisi seperti
+                            analis data, manajer TI, dan spesialis keamanan siber sering kali mendapatkan kompensasi
+                            yang menarik, mengingat keterampilan teknis yang dibutuhkan dan permintaan yang tinggi
+                            untuk profesional TI.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="reveal faq-item glass rounded-xl overflow-hidden" style="transition-delay: 0.4s;">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <span class="iconify text-2xl text-primary-400" data-icon="mdi:help-circle-outline"></span>
+                            <span class="font-heading font-semibold text-white text-left">Seberapa fleksibel
+                                pekerjaan di bidang Teknologi Informasi?</span>
+                        </div>
+                        <span class="iconify faq-icon text-2xl text-primary-400 transition-transform duration-300"
+                            data-icon="mdi:chevron-down"></span>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="py-4 text-white/70 leading-relaxed">
+                            Banyak pekerjaan di bidang Teknologi Informasi menawarkan fleksibilitas tinggi, seperti
+                            opsi untuk bekerja dari jarak jauh, jam kerja yang fleksibel, atau sistem kerja hybrid.
+                            Fleksibilitas ini memungkinkan karyawan TI untuk menyesuaikan jadwal kerja dengan
+                            kebutuhan pribadi mereka.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="reveal faq-item glass rounded-xl overflow-hidden" style="transition-delay: 0.5s;">
+                    <button onclick="toggleFaq(this)"
+                        class="w-full px-6 py-5 flex items-center justify-between hover:bg-white/5 transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <span class="iconify text-2xl text-primary-400" data-icon="mdi:help-circle-outline"></span>
+                            <span class="font-heading font-semibold text-white text-left">Bagaimana peran Teknologi
+                                Informasi dalam transformasi digital?</span>
+                        </div>
+                        <span class="iconify faq-icon text-2xl text-primary-400 transition-transform duration-300"
+                            data-icon="mdi:chevron-down"></span>
+                    </button>
+                    <div class="faq-content px-6">
+                        <p class="py-4 text-white/70 leading-relaxed">
+                            Teknologi Informasi berperan penting dalam transformasi digital dengan menyediakan alat
+                            dan solusi yang memungkinkan organisasi untuk mengoptimalkan operasi mereka dan
+                            beradaptasi dengan perubahan teknologi. Ini termasuk pengembangan dan penerapan sistem
+                            informasi yang mendukung otomatisasi, analisis data besar, dan integrasi berbagai
+                            platform digital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bengkel IT Section -->
+    <section id="bengkel" class="py-24 bg-primary-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30"
+            style="background-image: radial-gradient(circle at 1px 1px, #7c3aed 1px, transparent 0); background-size: 40px 40px;">
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-900 mb-4">Bengkel IT
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Punya keluhan mengenai install ulang, install aplikasi, dan masalah lainnya? Yuk, isi kolom
+                    dibawah ini untuk hubungi kami:
+                </p>
+            </div>
+
+            <!-- Form -->
+            <div class="reveal bg-white rounded-2xl shadow-xl p-8 sm:p-12" style="transition-delay: 0.2s;">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-dark-900 font-medium mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-dark-900"
+                                placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-dark-900 font-medium mb-2">Terkait</label>
+                            <select id="terkait" required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-dark-900">
+                                <option value="" disabled selected>Pilih masalah</option>
+                                <option value="Install Ulang">Install Ulang</option>
+                                <option value="Install Aplikasi">Install Aplikasi</option>
+                                <option value="Masalah Lain">Masalah Lain</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-dark-900 font-medium mb-2">Keluhan</label>
+                        <textarea id="message" rows="5" required
+                            class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none text-dark-900"
+                            placeholder="Jelaskan keluhan Anda..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2">
+                            <span>Kirim Pesan</span>
+                            <span class="iconify" data-icon="mdi:send"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+@endsection
+
+@section('script')
+    <script>
+        // Typed Text Animation
+        const typedText = document.getElementById('typed-text');
+        const phrases = ['Aktif, Kreatif, Inovatif', 'Bersama Membangun Masa Depan', 'Teknologi Untuk Indonesia'];
+        let phraseIndex = 0,
+            charIndex = 0,
+            isDeleting = false,
+            typingSpeed = 100;
+
+        function typeText() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typedText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                typedText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
+            }
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typingSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typingSpeed = 500;
+            }
+            setTimeout(typeText, typingSpeed);
+        }
+        setTimeout(typeText, 1000);
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            let current = 0;
+                            const step = target / (2000 / 16);
+                            const updateCounter = () => {
+                                current += step;
+                                if (current < target) {
+                                    counter.textContent = Math.floor(current);
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    counter.textContent = target;
+                                }
+                            };
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.5
+                });
+                observer.observe(counter);
+            });
+        }
+        animateCounters();
+
+        // Form Handler (Bengkel IT)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const terkait = document.getElementById('terkait').value;
+                const message = document.getElementById('message').value;
+                const waNumber = '6285161334009'; // Ganti dengan nomor WA asli
+                const waMessage =
+                    `Saya dari web site HMTI Kaliabang%0A%0AHalo, saya ${name}.%0A%0ATerkait: ${terkait}%0A%0AKeluhan:%0A${message}`;
+                window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
+                this.reset();
+            });
+        }
+    </script>
+@endsection
