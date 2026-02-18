@@ -103,38 +103,6 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Loader */
-        .loader {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: linear-gradient(135deg, #0f0d1a 0%, #1e1b4b 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        .loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .loader-element {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(139, 92, 246, 0.2);
-            border-top-color: #8b5cf6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
         /* Search Overlay */
         .search-overlay {
             position: fixed;
@@ -156,10 +124,6 @@
 
 <body class="font-body bg-dark-900 text-white antialiased">
 
-    <!-- Loader -->
-    <div id="page-loader" class="loader hidden">
-        <div class="loader-element"></div>
-    </div>
 
     <!-- Header Component -->
     <x-frontend.header />
@@ -179,37 +143,11 @@
             data-icon="mdi:chevron-up"></span>
     </button>
 
-    <!-- Search Overlay -->
-    <div id="search-overlay" class="search-overlay">
-        <div class="max-w-2xl mx-auto px-4 pt-32">
-            <div class="relative">
-                <button onclick="closeSearch()"
-                    class="absolute -top-16 right-0 p-3 rounded-full hover:bg-white/10 transition-colors">
-                    <span class="iconify text-3xl text-white/60 hover:text-white" data-icon="mdi:close"></span>
-                </button>
-                <form action="{{ route('frontend.search') }}" class="relative">
-                    <input type="search" name="q"
-                        value="{{ request()->route()->getName() == 'frontend.search' ? request()->q : '' }}"
-                        placeholder="What are you looking for?"
-                        class="w-full px-6 py-5 pl-14 bg-white/10 border border-white/20 rounded-2xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-white text-lg placeholder-white/40">
-                    <span class="iconify absolute left-5 top-1/2 -translate-y-1/2 text-2xl text-white/40"
-                        data-icon="mdi:magnify"></span>
-                    <button type="submit"
-                        class="absolute right-3 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-primary-600 hover:bg-primary-500 rounded-xl font-medium transition-colors">
-                        Search
-                    </button>
-                </form>
-                <p class="text-white/40 text-center mt-6">Press <kbd
-                        class="px-2 py-1 bg-white/10 rounded text-xs">ESC</kbd> to close</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Global JavaScript -->
     <!-- Global JavaScript -->
     <script>
         const navbar = document.getElementById('navbar');
         const scrollTopBtn = document.getElementById('scroll-top');
+
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {

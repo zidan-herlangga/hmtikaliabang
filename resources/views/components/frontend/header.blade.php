@@ -15,6 +15,8 @@
                     class="nav-link text-white/80 hover:text-white transition-colors font-medium">Tentang</a>
                 <a href="{{ route('frontend.home') }}#divisi"
                     class="nav-link text-white/80 hover:text-white transition-colors font-medium">Divisi</a>
+                <a href="{{ route('frontend.home') }}#gallery"
+                    class="nav-link text-white/80 hover:text-white transition-colors font-medium">Galeri</a>
                 <a href="{{ route('frontend.home') }}#bengkel"
                     class="nav-link text-white/80 hover:text-white transition-colors font-medium">Bengkel IT</a>
                 <a href="{{ route('frontend.home') }}#faq"

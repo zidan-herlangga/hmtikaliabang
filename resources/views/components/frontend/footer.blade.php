@@ -5,7 +5,7 @@
             <div>
                 <a href="#" class="flex items-center space-x-3 mb-6">
                     <img src="{{ asset('assets/homepage/logo-himpunan.png') }}" alt="Logo HMTI" class="h-16 w-auto">
-                    <span class="font-heading font-bold text-2xl text-white">HMTI</span>
+                    <span class="font-heading font-bold text-2xl text-white">HMTI Kaliabang</span>
                 </a>
                 <div class="text-white/60 space-y-2">
                     <p>Jl. Raya Kaliabang N0.8 Perwira</p>
@@ -43,11 +43,7 @@
             <div>
                 <h4 class="font-heading font-semibold text-white text-lg mb-6">Ikuti Kami</h4>
                 <div class="flex space-x-4">
-                    <a href="#"
-                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors group">
-                        <span class="iconify text-2xl text-white/60 group-hover:text-white"
-                            data-icon="mdi:whatsapp"></span>
-                    </a>
+                    {{-- Instagram --}}
                     <a href="https://www.instagram.com/hmti.kaliabang/" target="_blank"
                         class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors group">
                         <span class="iconify text-2xl text-white/60 group-hover:text-white"
@@ -58,11 +54,6 @@
                         class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors group">
                         <span class="iconify text-2xl text-white/60 group-hover:text-white"
                             data-icon="mdi:youtube"></span>
-                    </a>
-                    <a href="#" target="_blank"
-                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors group">
-                        <span class="iconify text-2xl text-white/60 group-hover:text-white"
-                            data-icon="mdi:linkedin"></span>
                     </a>
                 </div>
             </div>
